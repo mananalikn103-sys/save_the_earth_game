@@ -1,0 +1,6 @@
+{
+  "name": "Save The Earth",
+  "description": "Draw physics barriers to protect Earth from gravity, hazards, and attacking bees across 300 stages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
