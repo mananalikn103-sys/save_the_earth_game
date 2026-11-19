@@ -12,6 +12,7 @@ permissions:
 jobs:
   restore:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -19,13 +20,16 @@ jobs:
       - name: Extract original game ZIP
         run: |
           unzip -o "save-the-earth-nov-18-2026-2-30-26-pm.zip" -d .
-         - name: Fix esbuild version
+
+      - name: Fix esbuild version
         run: npm pkg set devDependencies.esbuild="^0.28.0"
+
       - name: Install dependencies
         run: npm install
 
       - name: Build game
         run: npm run build
+
       - name: Save restored files
         run: |
           git config user.name "github-actions[bot]"
